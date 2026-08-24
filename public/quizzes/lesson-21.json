@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-21",
+  "lessonId": "lesson-21",
+  "title": "Cloud and Container Security",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Under the shared responsibility model, what is always the customer's responsibility?",
+      "options": [
+        { "id": "a", "text": "Their data, identity/access management, and configuration" },
+        { "id": "b", "text": "The physical data-center hardware" },
+        { "id": "c", "text": "The hypervisor internals" },
+        { "id": "d", "text": "Nothing — the provider secures everything" }
+      ],
+      "answer": "a",
+      "explanation": "The provider secures the cloud itself, but the customer always secures what they put in it — data, IAM, and configuration."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Which are common causes of cloud breaches? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Publicly exposed storage buckets" },
+        { "id": "b", "text": "Over-permissive IAM roles" },
+        { "id": "c", "text": "Secrets committed to code or images" },
+        { "id": "d", "text": "Using least-privilege scoped roles" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Public storage, over-permissive IAM, and committed secrets cause most cloud breaches; least-privilege scoped roles are the fix, not a cause."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "Containers share the host's ____, which makes their isolation weaker than a virtual machine's.",
+      "answer": ["kernel"],
+      "explanation": "Containers isolate via namespaces/cgroups but share the host kernel, so a kernel flaw can allow a container escape — unlike a VM with its own kernel."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each cloud/container term to its meaning.",
+      "pairs": [
+        { "left": "IAM", "right": "Who/what can do which actions on which resources" },
+        { "left": "Container escape", "right": "Breaking out of a container to the host or others" },
+        { "left": "Image scanning", "right": "Checking an image for known-vulnerable packages" },
+        { "left": "Secrets manager", "right": "Stores and injects credentials securely" }
+      ],
+      "explanation": "IAM governs access, a container escape breaks isolation, image scanning finds vulnerable components, and a secrets manager keeps credentials out of code/images."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order a sound container image hardening pipeline.",
+      "items": [
+        { "id": "base", "text": "Choose a minimal base image" },
+        { "id": "scan", "text": "Scan the image for known vulnerabilities" },
+        { "id": "nonroot", "text": "Run as a non-root user with dropped capabilities" },
+        { "id": "secrets", "text": "Inject secrets at runtime (never bake them in)" }
+      ],
+      "answer": ["base", "scan", "nonroot", "secrets"],
+      "explanation": "Start minimal, scan for vulnerabilities, run non-root with least capabilities, and inject secrets at runtime rather than embedding them in the image."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why shouldn't untrusted code run in a plain container as a security sandbox?",
+      "options": [
+        { "id": "a", "text": "Containers share the host kernel, so a container escape can reach the host or other tenants" },
+        { "id": "b", "text": "Containers are too slow for untrusted code" },
+        { "id": "c", "text": "Containers cannot run code at all" },
+        { "id": "d", "text": "Untrusted code always needs the internet" }
+      ],
+      "answer": "a",
+      "explanation": "Because containers share the kernel, they aren't a strong boundary for hostile code; use a VM or hardened sandbox for untrusted workloads."
+    }
+  ]
+}

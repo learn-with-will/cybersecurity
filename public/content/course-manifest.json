@@ -1,0 +1,410 @@
+[
+  {
+    "id": "lesson-01",
+    "slug": "what-is-cybersecurity",
+    "title": "What Is Cybersecurity?",
+    "level": "beginner",
+    "order": 1,
+    "duration": 15,
+    "file": "beginner/what-is-cybersecurity.md",
+    "summary": "What cybersecurity actually is — protecting the confidentiality, integrity, and availability of information — plus the vocabulary of assets, threats, vulnerabilities, and risk, why security is a continuous process rather than a product, and an honest look at what it can and cannot promise.",
+    "tags": [
+      "foundations",
+      "cia-triad",
+      "risk",
+      "threats",
+      "overview"
+    ]
+  },
+  {
+    "id": "lesson-02",
+    "slug": "the-threat-landscape",
+    "title": "The Threat Landscape",
+    "level": "beginner",
+    "order": 2,
+    "duration": 17,
+    "file": "beginner/the-threat-landscape.md",
+    "summary": "Who attacks systems and why — the main kinds of threat actors and their motivations — plus the ideas of attack surface and attack vector, how a weakness becomes an incident, and how frameworks like MITRE ATT&CK and identifiers like CVE help defenders describe and track threats.",
+    "tags": [
+      "threats",
+      "threat-actors",
+      "attack-surface",
+      "risk",
+      "vulnerabilities"
+    ]
+  },
+  {
+    "id": "lesson-03",
+    "slug": "core-security-principles",
+    "title": "Core Security Principles",
+    "level": "beginner",
+    "order": 3,
+    "duration": 18,
+    "file": "beginner/core-security-principles.md",
+    "summary": "The timeless design principles that good security is built on — defense in depth, least privilege, fail-safe defaults, separation of duties, complete mediation, open design, and zero trust — where they come from, and how each one shapes the concrete controls in the rest of the course.",
+    "tags": [
+      "principles",
+      "least-privilege",
+      "defense-in-depth",
+      "zero-trust",
+      "design"
+    ]
+  },
+  {
+    "id": "lesson-04",
+    "slug": "networking-fundamentals",
+    "title": "Networking Fundamentals for Security",
+    "level": "beginner",
+    "order": 4,
+    "duration": 20,
+    "file": "beginner/networking-fundamentals.md",
+    "summary": "Just enough networking to reason about security — the TCP/IP layers, IP addresses and MAC addresses, ports and the services behind them, TCP versus UDP, how DNS turns names into addresses, and the full journey of a web request — with the security lesson that anything unencrypted on the wire can be read or changed.",
+    "tags": [
+      "networking",
+      "tcp-ip",
+      "ports",
+      "dns",
+      "packets"
+    ]
+  },
+  {
+    "id": "lesson-05",
+    "slug": "cryptography-essentials",
+    "title": "Cryptography Essentials",
+    "level": "beginner",
+    "order": 5,
+    "duration": 20,
+    "file": "beginner/cryptography-essentials.md",
+    "summary": "The three ideas people constantly confuse — encoding, encryption, and hashing — made clear, plus symmetric versus asymmetric keys, what digital signatures and authenticated encryption give you, and the golden rule to use vetted libraries instead of inventing your own crypto.",
+    "tags": [
+      "cryptography",
+      "encryption",
+      "hashing",
+      "keys",
+      "integrity"
+    ]
+  },
+  {
+    "id": "lesson-06",
+    "slug": "authentication-basics",
+    "title": "Authentication Basics",
+    "level": "beginner",
+    "order": 6,
+    "duration": 19,
+    "file": "beginner/authentication-basics.md",
+    "summary": "How systems prove who you are — the three authentication factors, why long passphrases and a password manager beat complex-but-short passwords, how passwords must be stored (salted, slow KDFs), and why multi-factor authentication — especially phishing-resistant FIDO2 — is the single biggest account-security win.",
+    "tags": [
+      "authentication",
+      "passwords",
+      "mfa",
+      "identity",
+      "credentials"
+    ]
+  },
+  {
+    "id": "lesson-07",
+    "slug": "authorization-and-access-control",
+    "title": "Authorization and Access Control",
+    "level": "beginner",
+    "order": 7,
+    "duration": 19,
+    "file": "beginner/authorization-and-access-control.md",
+    "summary": "How systems decide what an authenticated user may do — the access-control models (DAC, MAC, RBAC, ABAC), how file permissions and access-control lists work, and why broken access control is the number-one web risk, illustrated with insecure direct object references and missing permission checks.",
+    "tags": [
+      "authorization",
+      "access-control",
+      "rbac",
+      "least-privilege",
+      "permissions"
+    ]
+  },
+  {
+    "id": "lesson-08",
+    "slug": "malware-and-social-engineering",
+    "title": "Malware and Social Engineering",
+    "level": "beginner",
+    "order": 8,
+    "duration": 18,
+    "file": "beginner/malware-and-social-engineering.md",
+    "summary": "The two ways attackers get in — malicious software and manipulating people — covering the main malware types (virus, worm, trojan, ransomware, spyware, rootkit, botnet), how social-engineering tricks like phishing exploit human psychology, and the layered defenses that blunt both.",
+    "tags": [
+      "malware",
+      "phishing",
+      "social-engineering",
+      "ransomware",
+      "defense"
+    ]
+  },
+  {
+    "id": "lesson-09",
+    "slug": "web-application-security",
+    "title": "Web Application Security",
+    "level": "intermediate",
+    "order": 9,
+    "duration": 20,
+    "file": "intermediate/web-application-security.md",
+    "summary": "Why web applications are the biggest attack surface and how to reason about them — the stateless HTTP request/response model, the browser's same-origin boundary, the never-trust-client-input rule, and a tour of the OWASP Top 10 that frames the specific web attacks in the lessons that follow.",
+    "tags": [
+      "web-security",
+      "owasp-top-10",
+      "http",
+      "same-origin",
+      "trust-boundaries"
+    ]
+  },
+  {
+    "id": "lesson-10",
+    "slug": "injection-attacks",
+    "title": "Injection Attacks and Input Validation",
+    "level": "intermediate",
+    "order": 10,
+    "duration": 21,
+    "file": "intermediate/injection-attacks.md",
+    "summary": "Why injection happens whenever untrusted input is mixed into a command — SQL injection and OS command injection shown with their real fix, parameterized queries and safe APIs — plus the correct role of input validation as defense in depth rather than the primary control.",
+    "tags": [
+      "injection",
+      "sql-injection",
+      "input-validation",
+      "parameterized-queries",
+      "owasp"
+    ]
+  },
+  {
+    "id": "lesson-11",
+    "slug": "xss-and-csrf",
+    "title": "Cross-Site Scripting and CSRF",
+    "level": "intermediate",
+    "order": 11,
+    "duration": 21,
+    "file": "intermediate/xss-and-csrf.md",
+    "summary": "Two classic browser attacks and their defenses — cross-site scripting (stored, reflected, DOM-based) stopped by context-aware output encoding and a Content Security Policy, and cross-site request forgery stopped by anti-CSRF tokens and SameSite cookies — both rooted in how browsers handle content and cookies.",
+    "tags": [
+      "xss",
+      "csrf",
+      "output-encoding",
+      "csp",
+      "same-origin"
+    ]
+  },
+  {
+    "id": "lesson-12",
+    "slug": "tls-and-pki",
+    "title": "TLS and Public Key Infrastructure",
+    "level": "intermediate",
+    "order": 12,
+    "duration": 21,
+    "file": "intermediate/tls-and-pki.md",
+    "summary": "How HTTPS actually protects traffic — what TLS provides, how the TLS 1.3 handshake combines asymmetric and symmetric crypto with forward secrecy, and how certificates and the public-key infrastructure let your browser verify it's really talking to the right server rather than an impostor.",
+    "tags": [
+      "tls",
+      "pki",
+      "certificates",
+      "https",
+      "encryption"
+    ]
+  },
+  {
+    "id": "lesson-13",
+    "slug": "session-management-and-tokens",
+    "title": "Session Management and Tokens",
+    "level": "intermediate",
+    "order": 13,
+    "duration": 21,
+    "file": "intermediate/session-management-and-tokens.md",
+    "summary": "How web apps remember a logged-in user across stateless requests — server-side sessions with secure cookies, stateless JWTs and what their signature does and doesn't protect, and how OAuth 2.0 and OpenID Connect delegate access and identity — plus the attacks (hijacking, fixation) each design must resist.",
+    "tags": [
+      "sessions",
+      "cookies",
+      "jwt",
+      "oauth",
+      "authentication"
+    ]
+  },
+  {
+    "id": "lesson-14",
+    "slug": "network-defense",
+    "title": "Network Defense",
+    "level": "intermediate",
+    "order": 14,
+    "duration": 20,
+    "file": "intermediate/network-defense.md",
+    "summary": "The controls that protect networks — firewalls that filter traffic, segmentation that limits how far an intruder can spread, intrusion detection and prevention systems that spot and block attacks, VPNs that secure remote access, and web application firewalls — assembled into defense in depth at the network layer.",
+    "tags": [
+      "firewalls",
+      "ids-ips",
+      "segmentation",
+      "vpn",
+      "network-security"
+    ]
+  },
+  {
+    "id": "lesson-15",
+    "slug": "endpoint-and-os-hardening",
+    "title": "Endpoint and OS Hardening",
+    "level": "intermediate",
+    "order": 15,
+    "duration": 19,
+    "file": "intermediate/endpoint-and-os-hardening.md",
+    "summary": "How to make individual machines resist attack — timely patching to close known vulnerabilities, secure configuration against benchmarks like the CIS Benchmarks, least-privilege accounts, full-disk encryption for data at rest, and endpoint protection — reducing each device's attack surface as a layer of defense in depth.",
+    "tags": [
+      "hardening",
+      "patching",
+      "configuration",
+      "least-privilege",
+      "endpoints"
+    ]
+  },
+  {
+    "id": "lesson-16",
+    "slug": "logging-and-detection",
+    "title": "Logging, Monitoring, and Detection",
+    "level": "intermediate",
+    "order": 16,
+    "duration": 19,
+    "file": "intermediate/logging-and-detection.md",
+    "summary": "How defenders see what's happening — what to log (and what never to log), why centralized, tamper-resistant logs and synchronized clocks matter, how a SIEM correlates events into alerts, and how detection engineering maps suspicious behavior to frameworks like MITRE ATT&CK while fighting alert fatigue.",
+    "tags": [
+      "logging",
+      "monitoring",
+      "siem",
+      "detection",
+      "mitre-attack"
+    ]
+  },
+  {
+    "id": "lesson-17",
+    "slug": "threat-modeling",
+    "title": "Threat Modeling",
+    "level": "advanced",
+    "order": 17,
+    "duration": 20,
+    "file": "advanced/threat-modeling.md",
+    "summary": "How to find security flaws in a design before they're built — the four questions of threat modeling, the STRIDE framework for categorizing threats, data-flow diagrams and trust boundaries, attack trees, and how to prioritize the threats you find into concrete mitigations.",
+    "tags": [
+      "threat-modeling",
+      "stride",
+      "secure-design",
+      "data-flow-diagram",
+      "risk"
+    ]
+  },
+  {
+    "id": "lesson-18",
+    "slug": "vulnerability-management",
+    "title": "Vulnerability Management",
+    "level": "advanced",
+    "order": 18,
+    "duration": 20,
+    "file": "advanced/vulnerability-management.md",
+    "summary": "The continuous process of finding, prioritizing, and fixing weaknesses across your systems — asset inventory, vulnerability scanning, understanding CVE identifiers and CVSS scores, prioritizing with exploitability signals like EPSS and CISA KEV, and choosing between patching, mitigating, and accepting risk.",
+    "tags": [
+      "vulnerability-management",
+      "cve",
+      "cvss",
+      "patching",
+      "risk"
+    ]
+  },
+  {
+    "id": "lesson-19",
+    "slug": "penetration-testing",
+    "title": "Penetration Testing and Ethical Hacking",
+    "level": "advanced",
+    "order": 19,
+    "duration": 20,
+    "file": "advanced/penetration-testing.md",
+    "summary": "What authorized penetration testing is and — first and foremost — the legal authorization and scope that separate it from a crime, plus the phases of an engagement from reconnaissance to reporting, the types of tests, and why the written report of findings, not the exploit, is the real deliverable.",
+    "tags": [
+      "penetration-testing",
+      "ethical-hacking",
+      "authorization",
+      "methodology",
+      "reporting"
+    ]
+  },
+  {
+    "id": "lesson-20",
+    "slug": "incident-response-and-forensics",
+    "title": "Incident Response and Forensics",
+    "level": "advanced",
+    "order": 20,
+    "duration": 20,
+    "file": "advanced/incident-response-and-forensics.md",
+    "summary": "What to do when prevention fails — the incident-response lifecycle (preparation, detection and analysis, containment, eradication, recovery, and lessons learned) and the foundations of digital forensics: preserving evidence, respecting the order of volatility, and maintaining a chain of custody.",
+    "tags": [
+      "incident-response",
+      "forensics",
+      "nist-800-61",
+      "chain-of-custody",
+      "recovery"
+    ]
+  },
+  {
+    "id": "lesson-21",
+    "slug": "cloud-and-container-security",
+    "title": "Cloud and Container Security",
+    "level": "advanced",
+    "order": 21,
+    "duration": 21,
+    "file": "advanced/cloud-and-container-security.md",
+    "summary": "Securing modern infrastructure — the shared responsibility model that splits duties between provider and customer, why cloud IAM misconfigurations and public storage cause so many breaches, and how containers isolate workloads (and why that isolation is weaker than a VM), plus image, secrets, and Kubernetes basics.",
+    "tags": [
+      "cloud-security",
+      "shared-responsibility",
+      "iam",
+      "containers",
+      "kubernetes"
+    ]
+  },
+  {
+    "id": "lesson-22",
+    "slug": "devsecops-and-secure-sdlc",
+    "title": "DevSecOps and the Secure SDLC",
+    "level": "advanced",
+    "order": 22,
+    "duration": 20,
+    "file": "advanced/devsecops-and-secure-sdlc.md",
+    "summary": "Building security into how software is made — the secure development lifecycle and 'shift left', the automated tests that catch flaws in a CI/CD pipeline (SAST, DAST, SCA, secret and IaC scanning), and defending the software supply chain with dependency management, SBOMs, and signed, verifiable builds.",
+    "tags": [
+      "devsecops",
+      "secure-sdlc",
+      "sast-dast",
+      "supply-chain",
+      "ci-cd"
+    ]
+  },
+  {
+    "id": "lesson-23",
+    "slug": "governance-risk-and-compliance",
+    "title": "Governance, Risk, and Compliance",
+    "level": "advanced",
+    "order": 23,
+    "duration": 19,
+    "file": "advanced/governance-risk-and-compliance.md",
+    "summary": "The management side of security — governance through policies and clear ownership, structured risk management (assess, then treat by mitigating, transferring, avoiding, or accepting), and the frameworks and privacy laws (NIST CSF, ISO 27001, SOC 2, PCI DSS, GDPR) that shape programs — plus why compliance is a floor, not the same as being secure.",
+    "tags": [
+      "governance",
+      "risk-management",
+      "compliance",
+      "frameworks",
+      "privacy"
+    ]
+  },
+  {
+    "id": "lesson-24",
+    "slug": "capstone-security-program",
+    "title": "Capstone: Building a Security Program",
+    "level": "advanced",
+    "order": 24,
+    "duration": 22,
+    "file": "advanced/capstone-security-program.md",
+    "summary": "The course brought together — how the 23 preceding lessons assemble into one coherent, layered security program organized around the NIST CSF functions (Govern, Identify, Protect, Detect, Respond, Recover), applied end to end to a realistic organization, with prioritization and metrics.",
+    "tags": [
+      "capstone",
+      "defense-in-depth",
+      "nist-csf",
+      "security-program",
+      "synthesis"
+    ]
+  }
+]

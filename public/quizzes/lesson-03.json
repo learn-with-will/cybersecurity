@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-03",
+  "lessonId": "lesson-03",
+  "title": "Core Security Principles",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What does the principle of least privilege require?",
+      "options": [
+        { "id": "a", "text": "Every user and process gets only the access it needs — no more" },
+        { "id": "b", "text": "Everyone gets administrator rights for convenience" },
+        { "id": "c", "text": "Access is granted based on network location" },
+        { "id": "d", "text": "Security depends on hiding the system's design" }
+      ],
+      "answer": "a",
+      "explanation": "Least privilege grants the minimum access needed, which limits the blast radius when an account is compromised."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "Relying on hidden design instead of real controls is called security through ____.",
+      "answer": ["obscurity", "security through obscurity"],
+      "explanation": "Security through obscurity relies on secret designs or hidden URLs; open design (Kerckhoffs's principle) says security should rest on secret keys, not secret designs."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which are classic security design principles? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Fail-safe defaults (deny by default)" },
+        { "id": "b", "text": "Complete mediation (check every access)" },
+        { "id": "c", "text": "Separation of duties" },
+        { "id": "d", "text": "Trust everything inside the network perimeter" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Fail-safe defaults, complete mediation, and separation of duties are core principles; trusting the internal perimeter is exactly what zero trust rejects."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each principle to its meaning.",
+      "pairs": [
+        { "left": "Defense in depth", "right": "Multiple independent layers of protection" },
+        { "left": "Complete mediation", "right": "Check every access, every time" },
+        { "left": "Fail-safe default", "right": "Deny by default when in doubt or on error" },
+        { "left": "Zero trust", "right": "Never trust by location; verify every request" }
+      ],
+      "explanation": "Each principle turns into concrete controls: layered defenses, checking every access, denying by default, and verifying every request regardless of origin."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order these access states from most secure default to least secure, by the fail-safe principle.",
+      "items": [
+        { "id": "deny", "text": "Deny by default, grant explicitly" },
+        { "id": "granted", "text": "Grant only what is explicitly needed" },
+        { "id": "broad", "text": "Allow broadly, restrict later" },
+        { "id": "all", "text": "Allow everything" }
+      ],
+      "answer": ["deny", "granted", "broad", "all"],
+      "explanation": "Fail-safe defaults favor denying by default and granting the minimum; allowing everything and restricting later is the least secure posture."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why does 'psychological acceptability' matter as a security principle?",
+      "options": [
+        { "id": "a", "text": "Controls that are too painful get bypassed, so usable security is what actually gets used" },
+        { "id": "b", "text": "Users enjoy complex passwords" },
+        { "id": "c", "text": "It makes obscurity a valid primary defense" },
+        { "id": "d", "text": "It removes the need for authentication" }
+      ],
+      "answer": "a",
+      "explanation": "If security is too annoying people work around it, so effective controls must be usable — pairing strong controls with tools like password managers."
+    }
+  ]
+}

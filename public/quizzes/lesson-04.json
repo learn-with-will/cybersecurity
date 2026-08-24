@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-04",
+  "lessonId": "lesson-04",
+  "title": "Networking Fundamentals for Security",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the main security takeaway about unencrypted network traffic?",
+      "options": [
+        { "id": "a", "text": "Anything on the path (Wi-Fi, ISP, routers) can read or modify it" },
+        { "id": "b", "text": "It is automatically protected by the Wi-Fi password" },
+        { "id": "c", "text": "Only the destination server can see it" },
+        { "id": "d", "text": "It cannot be intercepted once it leaves your device" }
+      ],
+      "answer": "a",
+      "explanation": "By default, unencrypted traffic is visible to anything along its path, which is why TLS/HTTPS is needed for anything private."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each networking concept to its role.",
+      "pairs": [
+        { "left": "IP address", "right": "Routes packets across networks" },
+        { "left": "MAC address", "right": "Identifies an interface on the local link" },
+        { "left": "Port", "right": "Identifies which service a packet is for" },
+        { "left": "DNS", "right": "Translates names into IP addresses" }
+      ],
+      "explanation": "IP routes across networks, MAC reaches the local next hop, ports select the service, and DNS resolves names to addresses."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which statements about TCP and UDP are correct? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "TCP is connection-oriented and reliable" },
+        { "id": "b", "text": "TCP begins with a three-way handshake" },
+        { "id": "c", "text": "UDP is connectionless and fast with no delivery guarantee" },
+        { "id": "d", "text": "UDP guarantees ordered delivery" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "TCP is reliable and connection-oriented with a three-way handshake; UDP is connectionless and fast but makes no delivery or ordering guarantees."
+    },
+    {
+      "id": "q4",
+      "type": "ordering",
+      "prompt": "Order the TCP/IP layers from top (application) to bottom (link).",
+      "items": [
+        { "id": "app", "text": "Application" },
+        { "id": "transport", "text": "Transport" },
+        { "id": "internet", "text": "Internet" },
+        { "id": "link", "text": "Link" }
+      ],
+      "answer": ["app", "transport", "internet", "link"],
+      "explanation": "The TCP/IP model runs Application, Transport, Internet, then Link; data is encapsulated as it moves down the stack."
+    },
+    {
+      "id": "q5",
+      "type": "fill-blank",
+      "prompt": "HTTPS uses TLS on port ____ by default.",
+      "answer": ["443"],
+      "explanation": "HTTPS (HTTP over TLS) uses port 443, while plaintext HTTP uses port 80."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why does a Wi-Fi password NOT protect the contents of your browsing?",
+      "options": [
+        { "id": "a", "text": "It controls access to the network, not the confidentiality of each site's traffic" },
+        { "id": "b", "text": "It encrypts every website you visit end to end" },
+        { "id": "c", "text": "It replaces the need for HTTPS" },
+        { "id": "d", "text": "It hides your IP address from the destination" }
+      ],
+      "answer": "a",
+      "explanation": "A Wi-Fi password gates who can join the network; protecting the content of each connection requires HTTPS or a VPN."
+    }
+  ]
+}

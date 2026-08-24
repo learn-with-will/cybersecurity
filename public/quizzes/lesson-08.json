@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-08",
+  "lessonId": "lesson-08",
+  "title": "Malware and Social Engineering",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What is the key difference between a worm and a trojan?",
+      "options": [
+        { "id": "a", "text": "A worm self-replicates across networks; a trojan relies on a user running it" },
+        { "id": "b", "text": "A worm needs a user to run it; a trojan spreads by itself" },
+        { "id": "c", "text": "They are the same thing" },
+        { "id": "d", "text": "A worm only affects email; a trojan only affects browsers" }
+      ],
+      "answer": "a",
+      "explanation": "A worm spreads on its own across networks with no user action; a trojan is disguised as something desirable and depends on a user running it."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "The single best defense against ransomware is tested, offline ____.",
+      "answer": ["backups", "backup"],
+      "explanation": "Ransomware's leverage is lost availability; tested offline/immutable backups let you restore without paying."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which psychological levers do social-engineering attacks commonly exploit? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Authority (posing as a boss or IT)" },
+        { "id": "b", "text": "Urgency (act now or else)" },
+        { "id": "c", "text": "Fear or greed" },
+        { "id": "d", "text": "Careful independent verification" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Attackers pull on authority, urgency, and fear/greed to make targets act fast without checking; verification is the defense, not a lever."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each malware type to its behavior.",
+      "pairs": [
+        { "left": "Ransomware", "right": "Encrypts/steals data and demands payment" },
+        { "left": "Spyware", "right": "Secretly records activity and credentials" },
+        { "left": "Rootkit", "right": "Hides an attacker's presence in the system" },
+        { "left": "Botnet", "right": "A network of infected machines under remote control" }
+      ],
+      "explanation": "Ransomware extorts, spyware steals data, a rootkit conceals the attacker, and a botnet is a controlled network of infected machines."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order the stages of a layered anti-ransomware plan.",
+      "items": [
+        { "id": "prevent", "text": "Prevention (patching, MFA, filtering)" },
+        { "id": "limit", "text": "Limit spread (segmentation, least privilege)" },
+        { "id": "detect", "text": "Detection (monitoring, alerts)" },
+        { "id": "recover", "text": "Recovery (restore from offline backups)" }
+      ],
+      "answer": ["prevent", "limit", "detect", "recover"],
+      "explanation": "Defense in depth against ransomware layers prevention, containment of spread, detection, and recovery from backups."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "What is Business Email Compromise (BEC)?",
+      "options": [
+        { "id": "a", "text": "Impersonating an executive or vendor to trick staff into payments or data transfers" },
+        { "id": "b", "text": "A worm that spreads through email attachments" },
+        { "id": "c", "text": "Encrypting a company's email server for ransom" },
+        { "id": "d", "text": "A firewall rule that blocks external email" }
+      ],
+      "answer": "a",
+      "explanation": "BEC is a social-engineering scam impersonating a trusted person to trick staff into wiring money or sending data — often with no malware at all."
+    }
+  ]
+}

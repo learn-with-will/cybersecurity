@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-02",
+  "lessonId": "lesson-02",
+  "title": "The Threat Landscape",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Which best describes an Advanced Persistent Threat (APT)?",
+      "options": [
+        { "id": "a", "text": "A well-funded, skilled, patient adversary targeting a specific organization over time" },
+        { "id": "b", "text": "A low-skill attacker running tools written by others" },
+        { "id": "c", "text": "A single piece of self-spreading malware" },
+        { "id": "d", "text": "An automated vulnerability scanner" }
+      ],
+      "answer": "a",
+      "explanation": "APTs are advanced, persistent, well-resourced adversaries (often nation-state-linked) that pursue a specific target over a long period."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "The sum of all points where an attacker could try to get in or get data out is called the attack ____.",
+      "answer": ["surface", "attack surface"],
+      "explanation": "The attack surface is the total of all exposed points; reducing it (closing ports, removing services) cuts the number of possible attack vectors."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which are common types of threat actor? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Cybercriminals" },
+        { "id": "b", "text": "Insiders" },
+        { "id": "c", "text": "Hacktivists" },
+        { "id": "d", "text": "Firewalls" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Cybercriminals, insiders, and hacktivists are threat actors; a firewall is a defensive control, not an actor."
+    },
+    {
+      "id": "q4",
+      "type": "ordering",
+      "prompt": "Order the stages by which a weakness becomes an incident.",
+      "items": [
+        { "id": "vuln", "text": "Vulnerability (a weak point)" },
+        { "id": "exploit", "text": "Exploit (technique that uses it)" },
+        { "id": "compromise", "text": "Compromise (foothold gained)" },
+        { "id": "impact", "text": "Impact (data stolen, service down)" }
+      ],
+      "answer": ["vuln", "exploit", "compromise", "impact"],
+      "explanation": "Incidents progress from a vulnerability, to an exploit of it, to a compromise/foothold, to the eventual impact."
+    },
+    {
+      "id": "q5",
+      "type": "match-pair",
+      "prompt": "Match each reference to what it provides.",
+      "pairs": [
+        { "left": "MITRE ATT&CK", "right": "Knowledge base of adversary tactics and techniques" },
+        { "left": "CVE", "right": "Identifier for one specific vulnerability" },
+        { "left": "CWE", "right": "Category/type of weakness" },
+        { "left": "Zero-day", "right": "A vulnerability with no available patch yet" }
+      ],
+      "explanation": "ATT&CK catalogs adversary behavior, a CVE names a specific vulnerability, a CWE names the weakness type, and a zero-day is an unpatched flaw."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why can even a small, 'uninteresting' organization be compromised?",
+      "options": [
+        { "id": "a", "text": "Most attacks are automated and opportunistic, hitting anything reachable and vulnerable" },
+        { "id": "b", "text": "Only hand-picked targets are ever attacked" },
+        { "id": "c", "text": "Small organizations have no attack surface" },
+        { "id": "d", "text": "Attackers avoid systems they don't recognize" }
+      ],
+      "answer": "a",
+      "explanation": "Bots scan the whole internet for known weaknesses regardless of who owns the system — being reachable and vulnerable is enough."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "quiz-lesson-12",
+  "lessonId": "lesson-12",
+  "title": "TLS and Public Key Infrastructure",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Which is NOT something TLS provides by default?",
+      "options": [
+        { "id": "a", "text": "Proof that the website's content is honest or trustworthy" },
+        { "id": "b", "text": "Confidentiality of traffic in transit" },
+        { "id": "c", "text": "Integrity (tampering is detected)" },
+        { "id": "d", "text": "Authentication of the server's identity" }
+      ],
+      "answer": "a",
+      "explanation": "TLS gives confidentiality, integrity, and server authentication in transit — but it does not vouch for the site's honesty or protect data at rest."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "'SSL' is obsolete; the current protocol is TLS 1.2 and TLS ____.",
+      "answer": ["1.3", "TLS 1.3"],
+      "explanation": "SSL and TLS 1.0/1.1 are deprecated; use TLS 1.2 or 1.3 (as of writing)."
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "prompt": "Which statements about certificates and TLS are TRUE? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "A certificate binds a domain name to a public key, signed by a CA" },
+        { "id": "b", "text": "Browsers verify the chain up to a trusted root CA" },
+        { "id": "c", "text": "Forward secrecy keeps past sessions safe if the long-term key later leaks" },
+        { "id": "d", "text": "A valid certificate proves the site is not malicious" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Certificates bind a domain to a key and chain to a trusted root; forward secrecy protects past sessions. But even a phishing site can have a valid certificate."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each PKI term to its meaning.",
+      "pairs": [
+        { "left": "Certificate", "right": "Binds a domain to a public key" },
+        { "left": "Certificate Authority", "right": "Trusted issuer that signs certificates" },
+        { "left": "Chain of trust", "right": "Leaf → intermediate → trusted root" },
+        { "left": "Forward secrecy", "right": "Past sessions safe even if the key later leaks" }
+      ],
+      "explanation": "A certificate binds a domain to a key, a CA vouches for it, the chain links to a trusted root, and forward secrecy protects previously recorded sessions."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order the high-level steps of a TLS handshake.",
+      "items": [
+        { "id": "hello", "text": "Client offers versions/ciphers and a key-share (ClientHello)" },
+        { "id": "cert", "text": "Server responds with its choice and certificate" },
+        { "id": "verify", "text": "Client verifies the certificate" },
+        { "id": "keys", "text": "Both derive shared symmetric session keys" },
+        { "id": "data", "text": "Encrypted application data flows" }
+      ],
+      "answer": ["hello", "cert", "verify", "keys", "data"],
+      "explanation": "The handshake negotiates parameters, authenticates the server via its certificate, derives symmetric keys, and then exchanges encrypted data."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why doesn't a padlock (HTTPS) mean a website is safe?",
+      "options": [
+        { "id": "a", "text": "TLS secures the channel and proves the domain, but an attacker's site can have a valid certificate too" },
+        { "id": "b", "text": "The padlock only appears on malicious sites" },
+        { "id": "c", "text": "HTTPS scans the site's content for honesty" },
+        { "id": "d", "text": "A padlock disables all attacks" }
+      ],
+      "answer": "a",
+      "explanation": "HTTPS guarantees a private channel to that specific domain, not that the domain is honest — so users should check the actual domain name."
+    }
+  ]
+}

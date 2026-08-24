@@ -1,0 +1,78 @@
+{
+  "id": "quiz-lesson-22",
+  "lessonId": "lesson-22",
+  "title": "DevSecOps and the Secure SDLC",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What does 'shift left' mean in the secure SDLC?",
+      "options": [
+        { "id": "a", "text": "Move security earlier in development, where flaws are cheaper to fix" },
+        { "id": "b", "text": "Move security to the very end, just before release" },
+        { "id": "c", "text": "Left-align all security documentation" },
+        { "id": "d", "text": "Only test security in production" }
+      ],
+      "answer": "a",
+      "explanation": "Shifting left moves security activities earlier (design and coding), catching flaws when they cost a fraction of production fixes."
+    },
+    {
+      "id": "q2",
+      "type": "match-pair",
+      "prompt": "Match each security-testing tool to what it inspects.",
+      "pairs": [
+        { "left": "SAST", "right": "Source code (static analysis)" },
+        { "left": "DAST", "right": "A running application from the outside" },
+        { "left": "SCA", "right": "Third-party dependencies for known CVEs" },
+        { "left": "Secret scanning", "right": "Committed credentials in code/history" }
+      ],
+      "explanation": "SAST reads code, DAST attacks the running app, SCA checks dependencies, and secret scanning catches committed credentials — layered, they cover different flaws."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "A machine-readable inventory of every component in your software is called an ____ (acronym).",
+      "answer": ["SBOM", "software bill of materials"],
+      "explanation": "An SBOM (Software Bill of Materials) lets you instantly tell which systems are affected when a new dependency vulnerability is disclosed."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which defend the software supply chain (OWASP A08)? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Tracking and pinning dependencies" },
+        { "id": "b", "text": "Generating an SBOM" },
+        { "id": "c", "text": "Signing artifacts and using build provenance (SLSA)" },
+        { "id": "d", "text": "Trusting any dependency without review" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Dependency management, SBOMs, and signed/provenance-tracked builds defend the supply chain; blindly trusting dependencies is the risk."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order these DevSecOps pipeline stages.",
+      "items": [
+        { "id": "pr", "text": "On pull request: SAST, SCA, secret and IaC scans" },
+        { "id": "build", "text": "On build: generate an SBOM and sign the image" },
+        { "id": "deploy", "text": "On deploy to test: DAST against the running app" }
+      ],
+      "answer": ["pr", "build", "deploy"],
+      "explanation": "Static and dependency checks run at pull-request time, SBOM/signing at build, and dynamic testing against a running app after deploy to a test env."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why can security tooling that's too slow or noisy end up protecting nothing?",
+      "options": [
+        { "id": "a", "text": "Teams get exemptions and bypass it, so it must be fast and tuned to be followed" },
+        { "id": "b", "text": "Slow tools find more real bugs" },
+        { "id": "c", "text": "Noise makes attackers give up" },
+        { "id": "d", "text": "It automatically fixes the code" }
+      ],
+      "answer": "a",
+      "explanation": "Security that blocks delivery or floods developers with false positives gets routed around; guardrails must be fast and trustworthy to actually be used."
+    }
+  ]
+}

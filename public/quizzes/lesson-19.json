@@ -1,0 +1,80 @@
+{
+  "id": "quiz-lesson-19",
+  "lessonId": "lesson-19",
+  "title": "Penetration Testing and Ethical Hacking",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What must exist before any penetration testing begins?",
+      "options": [
+        { "id": "a", "text": "Explicit written authorization from the system owner, with defined scope" },
+        { "id": "b", "text": "A fast internet connection" },
+        { "id": "c", "text": "Nothing — curiosity is enough" },
+        { "id": "d", "text": "A public disclosure of the findings" }
+      ],
+      "answer": "a",
+      "explanation": "Authorization and scope are what separate ethical hacking from a crime; the same actions without permission are illegal under computer-crime laws."
+    },
+    {
+      "id": "q2",
+      "type": "ordering",
+      "prompt": "Order the phases of a penetration test.",
+      "items": [
+        { "id": "recon", "text": "Reconnaissance" },
+        { "id": "enum", "text": "Scanning / enumeration" },
+        { "id": "exploit", "text": "Gaining access (exploitation)" },
+        { "id": "post", "text": "Post-exploitation (assess impact)" },
+        { "id": "report", "text": "Reporting" }
+      ],
+      "answer": ["recon", "enum", "exploit", "post", "report"],
+      "explanation": "A test moves from reconnaissance and enumeration to careful exploitation and post-exploitation, ending in the report that delivers the value."
+    },
+    {
+      "id": "q3",
+      "type": "match-pair",
+      "prompt": "Match each engagement type to its description.",
+      "pairs": [
+        { "left": "Black box", "right": "Tester has no prior knowledge" },
+        { "left": "White box", "right": "Tester has full knowledge (architecture/source)" },
+        { "left": "Grey box", "right": "Tester has partial knowledge (e.g. a user account)" },
+        { "left": "Red team", "right": "Stealthy adversary simulation testing detection & response" }
+      ],
+      "explanation": "Black/grey/white box vary the tester's prior knowledge; a red team runs a goal-oriented, stealthy simulation that also tests the defenders."
+    },
+    {
+      "id": "q4",
+      "type": "fill-blank",
+      "prompt": "The real deliverable of a penetration test is not the exploit but the ____.",
+      "answer": ["report"],
+      "explanation": "Value comes from fixing what's found; the prioritized report with reproduction steps and remediation guidance is the product, not the exploit."
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Which must a professional engagement define up front? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Scope (what is in and out of bounds)" },
+        { "id": "b", "text": "Rules of Engagement (allowed techniques, timing, stop conditions)" },
+        { "id": "c", "text": "A signed authorization document" },
+        { "id": "d", "text": "The tester's favorite color" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Scope, Rules of Engagement, and signed authorization bound the test legally and safely; irrelevant preferences do not."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "How does a penetration test complement a vulnerability scan?",
+      "options": [
+        { "id": "a", "text": "The scan gives automated breadth; the pen test adds manual depth, chaining flaws to prove impact" },
+        { "id": "b", "text": "They are the same and either alone is complete" },
+        { "id": "c", "text": "A pen test replaces the need to ever scan" },
+        { "id": "d", "text": "Scanning proves exploitability better than a pen test" }
+      ],
+      "answer": "a",
+      "explanation": "Scanning covers many known issues automatically; a pen test manually chains weaknesses to demonstrate real, exploitable impact — you need both."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-16",
+  "lessonId": "lesson-16",
+  "title": "Logging, Monitoring, and Detection",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Which OWASP Top 10 (2021) category covers missing logging and monitoring?",
+      "options": [
+        { "id": "a", "text": "A09 — Security Logging and Monitoring Failures" },
+        { "id": "b", "text": "A01 — Broken Access Control" },
+        { "id": "c", "text": "A03 — Injection" },
+        { "id": "d", "text": "It is not in the OWASP Top 10" }
+      ],
+      "answer": "a",
+      "explanation": "Security Logging and Monitoring Failures is A09:2021; without them, attacks go undetected and become long, silent breaches."
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "prompt": "Which events should a security-conscious application log? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Login successes and failures" },
+        { "id": "b", "text": "Access denials and privilege changes" },
+        { "id": "c", "text": "Creation/deletion of important data and admin changes" },
+        { "id": "d", "text": "Users' plaintext passwords" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Log authentication, authorization (including denials), and important actions — but never log secrets like passwords or tokens."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "Logs must never contain ____ such as passwords, tokens, or full card numbers.",
+      "answer": ["secrets", "sensitive data"],
+      "explanation": "Logs are sensitive; recording secrets or excessive personal data turns a helpful log into a new breach."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each concept to its purpose.",
+      "pairs": [
+        { "left": "Centralized logging", "right": "Preserves evidence off a host an attacker can wipe" },
+        { "left": "Time synchronization (NTP)", "right": "Lets events from many systems line up" },
+        { "left": "SIEM", "right": "Correlates events and raises alerts" },
+        { "left": "MITRE ATT&CK", "right": "Maps detections to adversary techniques" }
+      ],
+      "explanation": "Centralization preserves evidence, clock sync enables correlation, a SIEM correlates and alerts, and ATT&CK maps detection coverage to attacker behavior."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order these logged events into the timeline of an account-takeover attempt.",
+      "items": [
+        { "id": "fail", "text": "Many failed logins for one account" },
+        { "id": "success", "text": "A successful login from a new IP" },
+        { "id": "role", "text": "The account's role is changed to admin" },
+        { "id": "export", "text": "A large data export occurs" }
+      ],
+      "answer": ["fail", "success", "role", "export"],
+      "explanation": "Correlating failures, a success, a privilege change, and exfiltration builds the story a SIEM rule can alert on — none of which any single log proves alone."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "What is 'alert fatigue' and how is it reduced?",
+      "options": [
+        { "id": "a", "text": "Desensitization from too many low-value alerts; reduce it by tuning and prioritizing" },
+        { "id": "b", "text": "A hardware failure in the SIEM; reduce it by rebooting" },
+        { "id": "c", "text": "Alerts arriving too slowly; reduce it by logging less" },
+        { "id": "d", "text": "Encryption of alerts; reduce it by disabling TLS" }
+      ],
+      "answer": "a",
+      "explanation": "Too many noisy alerts cause analysts to ignore them and miss the real one; tuning out false positives and prioritizing by severity restores signal."
+    }
+  ]
+}

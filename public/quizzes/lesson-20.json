@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-20",
+  "lessonId": "lesson-20",
+  "title": "Incident Response and Forensics",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "What distinguishes a security incident from a security event?",
+      "options": [
+        { "id": "a", "text": "An incident actually or imminently jeopardizes confidentiality, integrity, or availability" },
+        { "id": "b", "text": "An incident is any observable occurrence, however trivial" },
+        { "id": "c", "text": "There is no difference" },
+        { "id": "d", "text": "An event always involves a nation-state" }
+      ],
+      "answer": "a",
+      "explanation": "Any observable occurrence is an event; it becomes an incident when it actually or imminently harms the CIA of systems or data."
+    },
+    {
+      "id": "q2",
+      "type": "ordering",
+      "prompt": "Order the NIST incident-response lifecycle phases.",
+      "items": [
+        { "id": "prep", "text": "Preparation" },
+        { "id": "detect", "text": "Detection & Analysis" },
+        { "id": "contain", "text": "Containment, Eradication & Recovery" },
+        { "id": "post", "text": "Post-Incident Activity (lessons learned)" }
+      ],
+      "answer": ["prep", "detect", "contain", "post"],
+      "explanation": "The lifecycle runs Preparation, Detection & Analysis, Containment/Eradication/Recovery, then Post-Incident Activity, looping back to improve preparation."
+    },
+    {
+      "id": "q3",
+      "type": "fill-blank",
+      "prompt": "The rule to collect the most ephemeral evidence (like RAM) first is called the order of ____.",
+      "answer": ["volatility", "order of volatility"],
+      "explanation": "The order of volatility says to capture the most short-lived data first (registers, RAM) before disk, because powering off destroys memory evidence."
+    },
+    {
+      "id": "q4",
+      "type": "match-pair",
+      "prompt": "Match each forensic concept to its meaning.",
+      "pairs": [
+        { "left": "Chain of custody", "right": "Documented record of who handled evidence, when, and how" },
+        { "left": "Order of volatility", "right": "Collect the most ephemeral evidence first" },
+        { "left": "Forensic image", "right": "A verified copy you investigate instead of the live system" },
+        { "left": "Containment", "right": "Stopping the incident's spread" }
+      ],
+      "explanation": "Chain of custody keeps evidence admissible, order of volatility guides collection, forensic images preserve the original, and containment limits spread."
+    },
+    {
+      "id": "q5",
+      "type": "multiple-choice",
+      "prompt": "Which are sound incident-response practices? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Isolate a compromised host from the network while preserving RAM evidence" },
+        { "id": "b", "text": "Rebuild from known-good images rather than 'cleaning' a compromised host" },
+        { "id": "c", "text": "Recover from tested, clean backups and monitor for re-entry" },
+        { "id": "d", "text": "Improvise the plan during the incident" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Isolate-but-preserve, rebuild from known-good, and recover from clean backups are best practices; improvising instead of preparing is the classic failure."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why is 'clean the infected machine' usually not sufficient for eradication?",
+      "options": [
+        { "id": "a", "text": "A compromised host may hide persistence you can't be sure you removed, so rebuild from known-good" },
+        { "id": "b", "text": "Cleaning is illegal" },
+        { "id": "c", "text": "It takes longer than paying a ransom" },
+        { "id": "d", "text": "Antivirus always removes every trace" }
+      ],
+      "answer": "a",
+      "explanation": "You can't prove a compromised host is fully clean (e.g. a hidden rootkit), so the safe practice is rebuilding from a trusted image and restoring clean data."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "quiz-lesson-15",
+  "lessonId": "lesson-15",
+  "title": "Endpoint and OS Hardening",
+  "passingScore": 60,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single-choice",
+      "prompt": "Why is timely patching one of the highest-value security controls?",
+      "options": [
+        { "id": "a", "text": "Attackers quickly weaponize known vulnerabilities and scan for unpatched systems" },
+        { "id": "b", "text": "Patches make software run faster" },
+        { "id": "c", "text": "It removes the need for backups" },
+        { "id": "d", "text": "Only patched systems can use encryption" }
+      ],
+      "answer": "a",
+      "explanation": "Most attacks reuse publicly known vulnerabilities and scan the internet for unpatched systems, so prompt patching removes the exact doors they use."
+    },
+    {
+      "id": "q2",
+      "type": "fill-blank",
+      "prompt": "Encrypting a laptop's storage so a lost or stolen device stays confidential is called full-disk ____.",
+      "answer": ["encryption", "full-disk encryption"],
+      "explanation": "Full-disk encryption (BitLocker, FileVault, LUKS) protects data at rest, so device theft doesn't become a data breach."
+    },
+    {
+      "id": "q3",
+      "type": "match-pair",
+      "prompt": "Match each hardening action to what it reduces.",
+      "pairs": [
+        { "left": "Disable unused services", "right": "Attack surface" },
+        { "left": "Standard (non-admin) daily account", "right": "Malware's blast radius" },
+        { "left": "Apply a CIS Benchmark", "right": "Insecure default configuration" },
+        { "left": "Full-disk encryption", "right": "Risk of data loss on device theft" }
+      ],
+      "explanation": "Each hardening step targets a specific weakness: fewer services, less privilege, secure baselines, and protected data at rest."
+    },
+    {
+      "id": "q4",
+      "type": "multiple-choice",
+      "prompt": "Which are good endpoint-hardening practices? Select all that apply.",
+      "options": [
+        { "id": "a", "text": "Automate security updates and prioritize internet-facing systems" },
+        { "id": "b", "text": "Use standard accounts for daily work and elevate per action" },
+        { "id": "c", "text": "Remove default credentials and unused services" },
+        { "id": "d", "text": "Make every user a local administrator for convenience" }
+      ],
+      "answer": ["a", "b", "c"],
+      "explanation": "Automated updates, least-privilege accounts, and removing defaults/unused services harden endpoints; making everyone admin maximizes blast radius."
+    },
+    {
+      "id": "q5",
+      "type": "ordering",
+      "prompt": "Order the steps to harden a new internet-facing server.",
+      "items": [
+        { "id": "patch", "text": "Inventory and apply all patches" },
+        { "id": "surface", "text": "Disable unused services and close unneeded ports" },
+        { "id": "accounts", "text": "Set up least-privilege accounts (no shared admin)" },
+        { "id": "baseline", "text": "Apply a hardening baseline and enable the host firewall" }
+      ],
+      "answer": ["patch", "surface", "accounts", "baseline"],
+      "explanation": "Patch first, reduce attack surface, tighten accounts, then apply a secure baseline and firewall — each step removes exposure or caps damage."
+    },
+    {
+      "id": "q6",
+      "type": "single-choice",
+      "prompt": "Why should daily work use a standard (non-admin) account?",
+      "options": [
+        { "id": "a", "text": "If malware runs, it inherits only limited rights, capping the damage" },
+        { "id": "b", "text": "Standard accounts cannot be phished" },
+        { "id": "c", "text": "Admin accounts are slower" },
+        { "id": "d", "text": "It disables the need for patching" }
+      ],
+      "answer": "a",
+      "explanation": "Running as a standard user means malware executing in that context inherits limited privileges, greatly reducing what it can do compared with admin."
+    }
+  ]
+}
