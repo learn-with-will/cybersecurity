@@ -45,6 +45,11 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Enable GitHub Pages (Actions build type) on the repo from within the
+          # workflow, so no manual Settings → Pages step is needed. Requires the
+          # `pages: write` permission declared above.
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
