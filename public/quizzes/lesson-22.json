@@ -1,6 +1,6 @@
 {
-  "id": "quiz-lesson-22",
-  "lessonId": "lesson-22",
+  "id": "quiz-devsecops-and-secure-sdlc",
+  "lessonId": "devsecops-and-secure-sdlc",
   "title": "DevSecOps and the Secure SDLC",
   "passingScore": 60,
   "questions": [

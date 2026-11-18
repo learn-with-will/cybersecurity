@@ -15,7 +15,7 @@
         { "id": "d", "text": "A public disclosure of the findings" }
       ],
       "answer": "a",
-      "explanation": "Authorization and scope are what separate ethical hacking from a crime; the same actions without permission are illegal under computer-crime laws."
+      "explanation": "Authorization and scope are what separate ethical hacking from a crime; the same actions without permission are illegal."
     },
     {
       "id": "q2",
@@ -26,10 +26,11 @@
         { "id": "enum", "text": "Scanning / enumeration" },
         { "id": "exploit", "text": "Gaining access (exploitation)" },
         { "id": "post", "text": "Post-exploitation (assess impact)" },
-        { "id": "report", "text": "Reporting" }
+        { "id": "report", "text": "Reporting" },
+        { "id": "retest", "text": "Remediation retest" }
       ],
-      "answer": ["recon", "enum", "exploit", "post", "report"],
-      "explanation": "A test moves from reconnaissance and enumeration to careful exploitation and post-exploitation, ending in the report that delivers the value."
+      "answer": ["recon", "enum", "exploit", "post", "report", "retest"],
+      "explanation": "A test moves from reconnaissance and enumeration to careful exploitation and post-exploitation, ending in the report and confirmation retest."
     },
     {
       "id": "q3",
@@ -41,14 +42,14 @@
         { "left": "Grey box", "right": "Tester has partial knowledge (e.g. a user account)" },
         { "left": "Red team", "right": "Stealthy adversary simulation testing detection & response" }
       ],
-      "explanation": "Black/grey/white box vary the tester's prior knowledge; a red team runs a goal-oriented, stealthy simulation that also tests the defenders."
+      "explanation": "Black/grey/white box vary the tester's prior knowledge; a red team runs a goal-oriented, stealthy simulation."
     },
     {
       "id": "q4",
       "type": "fill-blank",
       "prompt": "The real deliverable of a penetration test is not the exploit but the ____.",
       "answer": ["report"],
-      "explanation": "Value comes from fixing what's found; the prioritized report with reproduction steps and remediation guidance is the product, not the exploit."
+      "explanation": "Value comes from fixing what's found; the prioritized report with remediation guidance is the product."
     },
     {
       "id": "q5",
@@ -61,7 +62,7 @@
         { "id": "d", "text": "The tester's favorite color" }
       ],
       "answer": ["a", "b", "c"],
-      "explanation": "Scope, Rules of Engagement, and signed authorization bound the test legally and safely; irrelevant preferences do not."
+      "explanation": "Scope, Rules of Engagement, and signed authorization bound the test legally and safely."
     },
     {
       "id": "q6",
@@ -74,7 +75,7 @@
         { "id": "d", "text": "Scanning proves exploitability better than a pen test" }
       ],
       "answer": "a",
-      "explanation": "Scanning covers many known issues automatically; a pen test manually chains weaknesses to demonstrate real, exploitable impact — you need both."
+      "explanation": "Scanning covers many known issues automatically; a pen test manually chains weaknesses to demonstrate real, exploitable impact."
     }
   ]
 }
