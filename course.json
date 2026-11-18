@@ -1,0 +1,17 @@
+{
+  "id": "cybersecurity",
+  "name": "Cybersecurity",
+  "subject": "Cybersecurity",
+  "description": "Learn to protect systems, networks, and data by understanding the security landscape, threat vectors, and defense strategies.",
+  "brand": {
+    "color": "#0891b2"
+  },
+  "home": {
+    "headline": "Defend | the | Digital Frontier",
+    "search": ["security", "threats", "defense"],
+    "slug": "what-is-cybersecurity",
+    "code": "/* Example of securing a sensitive file */\nchmod 600 config.json\n# Only owner can read/write",
+    "quiz": "cyber-foundations-01"
+  },
+  "codeLanguages": ["bash", "sql", "yaml"]
+}
