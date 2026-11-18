@@ -1,0 +1,92 @@
+[
+  {
+    "id": "foundations",
+    "title": "Foundations",
+    "blurb": "The core concepts of cybersecurity: CIA triad, threat models, and risk management.",
+    "order": 1
+  },
+  {
+    "id": "principles",
+    "title": "Design Principles",
+    "blurb": "Timeless security design principles like defense-in-depth and least privilege.",
+    "order": 2
+  },
+  {
+    "id": "networking",
+    "title": "Networking",
+    "blurb": "Understanding how networks work and the security implications.",
+    "order": 3
+  },
+  {
+    "id": "cryptography",
+    "title": "Cryptography",
+    "blurb": "Encoding, encryption, and hashing: keeping data confidential and untampered.",
+    "order": 4
+  },
+  {
+    "id": "authentication",
+    "title": "Authentication",
+    "blurb": "Proving identity with passwords, MFA, and modern identity protocols.",
+    "order": 5
+  },
+  {
+    "id": "authorization",
+    "title": "Authorization",
+    "blurb": "Managing access and permissions securely.",
+    "order": 6
+  },
+  {
+    "id": "web-security",
+    "title": "Web Security",
+    "blurb": "Securing web applications and sessions.",
+    "order": 7
+  },
+  {
+    "id": "network-security",
+    "title": "Network Security",
+    "blurb": "Protecting network infrastructure.",
+    "order": 8
+  },
+  {
+    "id": "endpoint-security",
+    "title": "Endpoint Security",
+    "blurb": "Hardening individual machines and endpoints.",
+    "order": 9
+  },
+  {
+    "id": "logging-and-detection",
+    "title": "Logging and Detection",
+    "blurb": "Observing and responding to security events.",
+    "order": 10
+  },
+  {
+    "id": "secure-design",
+    "title": "Secure Design",
+    "blurb": "Designing secure systems from the start.",
+    "order": 11
+  },
+  {
+    "id": "vulnerability-management",
+    "title": "Vulnerability Management",
+    "blurb": "Managing vulnerabilities across the organization.",
+    "order": 12
+  },
+  {
+    "id": "governance-risk-and-compliance",
+    "title": "Governance, Risk, and Compliance",
+    "blurb": "Managing security through policy, structured risk management, and compliance frameworks.",
+    "order": 13
+  },
+  {
+    "id": "cloud-security",
+    "title": "Cloud Security",
+    "blurb": "The shared responsibility model and securing your cloud infrastructure.",
+    "order": 14
+  },
+  {
+    "id": "container-security",
+    "title": "Container Security",
+    "blurb": "Harden your containerized applications and Kubernetes clusters.",
+    "order": 15
+  }
+]

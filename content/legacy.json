@@ -1,0 +1,15 @@
+[
+  {
+    "id": "lesson-23",
+    "slug": "governance-risk-and-compliance",
+    "title": "Governance, Risk, and Compliance",
+    "lessons": [
+      "governance-basics",
+      "risk-management-cycle",
+      "risk-treatment-options",
+      "frameworks-and-regulations",
+      "privacy-vs-security",
+      "compliance-is-a-floor"
+    ]
+  }
+]

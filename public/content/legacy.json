@@ -1,0 +1,45 @@
+[
+  {
+    "id": "lesson-13",
+    "file": "intermediate/session-management-and-tokens.md",
+    "migratedTo": "bites/lesson-13/"
+  },
+  {
+    "id": "lesson-14",
+    "file": "intermediate/network-defense.md",
+    "migratedTo": "bites/lesson-14/"
+  },
+  {
+    "id": "lesson-15",
+    "file": "intermediate/endpoint-and-os-hardening.md",
+    "migratedTo": "bites/lesson-15/"
+  },
+  {
+    "id": "lesson-16",
+    "file": "intermediate/logging-and-detection.md",
+    "migratedTo": "bites/lesson-16/"
+  },
+  {
+    "id": "lesson-17",
+    "file": "advanced/threat-modeling.md",
+    "migratedTo": "bites/lesson-17/"
+  },
+  {
+    "id": "lesson-18",
+    "file": "advanced/vulnerability-management.md",
+    "migratedTo": "bites/lesson-18/"
+  },
+  {
+    "id": "lesson-21",
+    "slug": "cloud-and-container-security",
+    "title": "Cloud and Container Security",
+    "lessons": [
+      "shared-responsibility-model",
+      "cloud-misconfiguration",
+      "secrets-management",
+      "container-isolation",
+      "container-hardening",
+      "kubernetes-basics"
+    ]
+  }
+]
